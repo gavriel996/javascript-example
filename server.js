@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/hoisting', (req, res) => {
     variable_y = 5
-    res.send('y'); // since the declaration is hoisted to the top we get 5.
+    res.send('variable_y=' + variable_y); // since the declaration is hoisted to the top we get 5.
     var variable_y
 });
 // testing scope
@@ -56,18 +56,29 @@ app.listen(3000, () => {
 //npm ls --depth=0 (check installed packages)
 //npm install (from inside the file to update dependencies)
 //npm install --save-dev jest
+//npm install -g testcafe
 //node --watch server.js
+//testcafe chrome test_cafe_gettin_started.js
 
 // Lets do a github action which will run the code and afterwards run jest tests for me. (lets make it happen on branch push).
 // Lets create a full CI with ENV variables and deploy image to my docker public registry. (Might need to use Secrets in repo)
-// Make sure ENV is empty
-// Add init to initialize environment
 
 // Maybe do it locally with cypress too
 
-// I was in the middle of going through jest docs
 // beforeEach and afterEach
-// Contribute to both internal and external documentation, including writing clear, concise guides and creating code samples to support our users.
 // version control platforms
 // testing frameworks
 // Familiarity with Selenium, WebdriverIO and Cypress, Docker, Kubernetes, or Cloud Platforms like AWS
+
+// TODO: add proper .env init for first timers
+// TODO: use applitools eyes WebDriverIO - can't need api key
+// TODO: use applitools eyes TestCafe - can't need api key
+// TODO: do a selenium java example - can't need api key
+// TODO: do a selenium python example - can't need api key
+
+// TODO: checkout Playwright for java / python
+// TODO: add proper ci for creating the image deploy .env on CI run, run the code and running the test.
+
+// Checkout the cypress
+
+// Playwright, testcafe, Cypress, leetcode js
