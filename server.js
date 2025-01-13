@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/hoisting', (req, res) => {
     variable_y = 5
-    res.send('variable_y=' + variable_y); // since the declaration is hoisted to the top we get 5.
+    res.send('variable_y=' + variable_y); // since the declaration is hoisted to the top we get 5, change to let to fail the testcafe local test.
     var variable_y
 });
 // testing scope
@@ -52,22 +52,28 @@ app.listen(3000, () => {
   console.log('Server started on port 3000');
 });
 
-//npm test (runs the tests as we configured in package.json)
-//npm ls --depth=0 (check installed packages)
 //npm install (from inside the file to update dependencies)
 //npm install --save-dev jest
-//npm install -g testcafe
+//npm install --save-dev testcafe
+//npm init playwright@latest
+
+//npm ls --depth=0 (check installed packages)
 //node --watch server.js
-//testcafe chrome test_cafe_gettin_started.js
+//npm test (runs the tests as we configured in package.json)
+//testcafe chrome test/test_cafe_gettin_started.js
+
+//npx playwright test
+//npx playwright show-report
+//npx playwright test --ui
 
 // Lets do a github action which will run the code and afterwards run jest tests for me. (lets make it happen on branch push).
 // Lets create a full CI with ENV variables and deploy image to my docker public registry. (Might need to use Secrets in repo)
 
 // Maybe do it locally with cypress too
 
-// beforeEach and afterEach
-// version control platforms
-// testing frameworks
+// beforeEach and afterEach  - relates to before each run and after each run.
+// version control platforms - ?
+// testing frameworks - did testcafe and jest.
 // Familiarity with Selenium, WebdriverIO and Cypress, Docker, Kubernetes, or Cloud Platforms like AWS
 
 // TODO: add proper .env init for first timers
